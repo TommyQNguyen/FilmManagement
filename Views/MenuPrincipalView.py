@@ -9,6 +9,7 @@ class MenuPrincipal:
     print("2) Afficher les films")
     print("3) Rechercher un film")
     print("4) Gerer les categories")
+    print("5) Exporter film")
     print()                         # Sauter une ligne
     print("Entrez votre choix")
 

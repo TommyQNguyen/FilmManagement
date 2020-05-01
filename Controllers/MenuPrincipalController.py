@@ -5,6 +5,7 @@ from Controllers.MenuCreationFilmController import MenuCreationFilmController
 from Controllers.MenuAfficherLesFilmsController import MenuAfficherLesFilmsController
 from Controllers.MenuRechercherUnFilmControlleur import MenuRechercherUnFilmController
 from Controllers.MenuGererLesCategoriesController import MenuGererLesCategoriesController
+from Controllers.MenuExporterFilmController import MenuExporterFilmController
 
 class MenuPrincipalController:
     def __init__(self):
@@ -24,7 +25,8 @@ class MenuPrincipalController:
         if menuChoice == '2' : MenuAfficherLesFilmsController(getBackToMenuPrincipal=self.init).init()
         if menuChoice == '3' : MenuRechercherUnFilmController(getBackToMenuPrincipal=self.init).init()
         if menuChoice == '4' : MenuGererLesCategoriesController(getBackToMenuPrincipal=self.init).init()
-    
+        if menuChoice == '5' : MenuExporterFilmController(getBackToMenuPrincipal=self.init).init()
+
 
     
 
