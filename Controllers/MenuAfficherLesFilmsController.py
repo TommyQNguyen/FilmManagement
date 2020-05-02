@@ -1,5 +1,6 @@
 from Views.MenuAfficherLesFilmsView import MenuAfficherFilms
 
+
 class MenuAfficherLesFilmsController:
     def __init__(self, getBackToMenuPrincipal):
         self.view = MenuAfficherFilms()
@@ -9,7 +10,3 @@ class MenuAfficherLesFilmsController:
         self.view.printMenu()
         returnMenuPrincipalUserInput = self.view.getUserInput()
         self.getBackToMenuPrincipal()
-
-
-
-
