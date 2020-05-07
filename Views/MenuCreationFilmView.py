@@ -14,12 +14,18 @@ class MenuCreationFilm(SubMenuView):
         realisateur = self.getUserInput()
         print("\n Acteurs(separer par trait d'union)")
         acteurs = self.getUserInput()
+        print("\n Note (1-10))")
+        note = self.getUserInput()
+        print("\n Commentaire (sans virgule)")
+        commentaire = self.getUserInput()
         return {
             "nom": nom,
             "categorie": categorie,
             "annee": annee,
             "realisateur": realisateur,
             "acteurs": acteurs,
+            "note": note,
+            "commentaire": commentaire,
         }
 
     def printMenu(self):

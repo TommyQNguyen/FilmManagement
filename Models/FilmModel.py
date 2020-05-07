@@ -6,7 +6,15 @@ import uuid
 class FilmModel(DataSource):
     def __init__(self):
         self.fichierCSV = "films.csv"
-        self.fields = ["nom", "categorie", "annee", "realisateur", "acteurs"]
+        self.fields = [
+            "nom",
+            "categorie",
+            "annee",
+            "realisateur",
+            "acteurs",
+            "note",
+            "commentaire",
+        ]
 
     def getFilms(self):
         films = self.read(self.fichierCSV)
@@ -48,7 +56,14 @@ class FilmModel(DataSource):
     # chaque proprieter est seulement ajouter si l'argument d'export est True
     # l'export va sauvegarder le csv avec un nom unique ensuite
     def exportFilmList(
-        self, nom=False, categorie=False, annee=False, realisateur=False, acteurs=False
+        self,
+        nom=False,
+        categorie=False,
+        annee=False,
+        realisateur=False,
+        acteurs=False,
+        note=False,
+        commentaire=False,
     ):
         films = self.getFilms()
         fields = []
@@ -62,6 +77,10 @@ class FilmModel(DataSource):
             fields.append("realisateur")
         if acteurs != False:
             fields.append("acteurs")
+        if note != False:
+            fields.append("note")
+        if commentaire != False:
+            fields.append("commentaire")
 
         exportedFilms = list(
             map(
@@ -75,6 +94,12 @@ class FilmModel(DataSource):
                         else {}
                     ),
                     **({"acteurs": x["acteurs"]} if acteurs is not False else {}),
+                    **({"note": x["note"]} if note is not False else {}),
+                    **(
+                        {"commentaire": x["commentaire"]}
+                        if commentaire is not False
+                        else {}
+                    ),
                 },
                 films,
             )
