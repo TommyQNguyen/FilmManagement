@@ -5,8 +5,14 @@ from Classes.SubMenuView import SubMenuView
 class MenuAfficherFilms(SubMenuView):  # class MenuAfficherFilms extends SubMenuView
     def printList(self, filmList):
         print(
-            "{:<15} {:<15} {:<15} {:<15} {:<15}".format(
-                "Nom", "Categorie", "Annee", "Realisateur", "Acteurs"
+            "{:<15} {:<15} {:<15} {:<15} {:<15} {:<15} {:<15}".format(
+                "Nom",
+                "Categorie",
+                "Annee",
+                "Realisateur",
+                "Acteurs",
+                "Note",
+                "Commentaire",
             )
         )
         print(
@@ -14,12 +20,14 @@ class MenuAfficherFilms(SubMenuView):  # class MenuAfficherFilms extends SubMenu
         )
         for film in filmList:
             print(
-                "{:<15} {:<15} {:<15} {:<15} {:<15}".format(
+                "{:<15} {:<15} {:<15} {:<15} {:<15} {:<15} {:<15}".format(
                     film["nom"],
                     film["categorie"],
                     film["annee"],
                     film["realisateur"],
                     film["acteurs"],
+                    film["note"],
+                    film["commentaire"],
                 )
             )
 
