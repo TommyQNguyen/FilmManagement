@@ -5,6 +5,7 @@ Les fonctionnalites incluent:
 - Recherche de films
 - Exportation personnalisee de films
 
+
 ## Installation
 
 Assurez-vous d'avoir Python installe!
