@@ -1,21 +1,21 @@
-# Projet de Film en Python
-> Mon programme permet a l'utilisateur de pouvoir entreposer les informations sur un film.
-Les fonctionnalites incluent:
-- Gestion des films
-- Recherche de films
-- Exportation personnalisee de films
+# Movie project in Python
+> This program allows the user to be able to store information about a movie. 
+Features include:
+- Movie management
+- Movie search
+- Personalized movie list export
 
 
 ## Installation
 
-Assurez-vous d'avoir Python installe!
+Make sure to have Python installed on your computer
 ```
 python app.py
 ```
-Ceci partira le projet.
-Le projet ne comporte aucune autre dependance.
+This will run the program
+The program does not have any dependancies.
 
-## Structure de fichiers
+## Folder structure
 ```
 App
 │   README.md
